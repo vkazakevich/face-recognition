@@ -40,7 +40,7 @@ async function initFaceLandmark() {
   faceLandmarker = await FaceLandmarker.createFromOptions(vision, {
     baseOptions: {
       // modelAssetPath: `https://storage.googleapis.com/mediapipe-models/face_landmarker/face_landmarker/float16/1/face_landmarker.task`,
-      modelAssetPath: `../models/face_landmarker.task`,
+      modelAssetPath: `/face-recognition/models/face_landmarker.task`,
       delegate: 'GPU'
     },
     outputFaceBlendshapes: true,
