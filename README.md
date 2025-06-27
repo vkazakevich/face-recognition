@@ -1,4 +1,4 @@
-# Face Reorganizer
+# Face Recognition
 
 ## Run local with web server
 
