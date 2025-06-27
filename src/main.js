@@ -34,7 +34,7 @@ let showNumbers = false
 async function initFaceLandmark() {
   const vision = await FilesetResolver.forVisionTasks(
     // 'https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@latest/wasm'
-    '/mediapipe-wasm/wasm'
+    '/face-recognition/mediapipe-wasm/wasm'
   )
 
   faceLandmarker = await FaceLandmarker.createFromOptions(vision, {
