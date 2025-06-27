@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Face Reorganizer</title>
+  </head>
+  <body>
+    <div class="flex justify-center">
+      <div class="flex h-screen w-screen items-center justify-center flex-col">
+        <div
+          class="border border-gray-200 rounded-2xl overflow-hidden flex min-h-[538px] min-w-[958px]"
+        >
+          <div class="grow flex flex-col">
+            <div style="position: relative">
+              <video id="video" autoplay playsinline></video>
+              <canvas
+                id="canvas"
+                style="position: absolute; left: 0px; top: 0px"
+              ></canvas>
+            </div>
+
+            <div class="flex justify-between w-full mt-auto">
+              <button
+                data-control="points"
+                class="border-r border-gray-200 h-full p-4 hover:bg-gray-200 cursor-pointer grow control_button_js"
+              >
+                Toggle Show Points
+              </button>
+              <button
+                data-control="numbers"
+                class="border-r border-gray-200 h-full p-4 hover:bg-gray-200 cursor-pointer grow control_button_js"
+              >
+                Toggle Show Numbers
+              </button>
+              <button
+                data-control="connectors"
+                class="border-r border-gray-200 h-full p-4 hover:bg-gray-200 cursor-pointer grow control_button_js"
+              >
+                Toggle Show Connectors
+              </button>
+            </div>
+          </div>
+
+          <div class="border-l border-gray-200 p-4 flex flex-col">
+            <div
+              class="flex items-center justify-between pb-2 mb-2 border-b border-gray-200 w-full"
+            >
+              <h2 class="font-medium text-lg">All users</h2>
+              <button
+                class="bg-red-600 text-white rounded px-3 py-1 cursor-pointer"
+                id="clearDB"
+              >
+                Clear
+              </button>
+            </div>
+
+            <ul class="grow" id="userList"></ul>
+
+            <div class="-mx-4 px-4 pt-4 border-t border-gray-200">
+              <form id="enrollingForm">
+                <input
+                  name="username"
+                  id="usernameField"
+                  placeholder="Username"
+                  class="border border-gray-200 pl-4 rounded-md h-10 mr-4"
+                  value=""
+                />
+                <button
+                  type="submit"
+                  class="px-3 py-1 bg-purple-700 text-white rounded-md h-10"
+                >
+                  Register
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
